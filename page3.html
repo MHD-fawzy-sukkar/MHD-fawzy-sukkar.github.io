@@ -8,42 +8,53 @@
     <meta name="description" content="Gallery of popular international dishes and fast food">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Css/template.css">
-    <script src="Js/script.js"></script>
+    <link rel="stylesheet" href="dist/css/lightbox.css">
+    <link rel="stylesheet" href="dist/css/lightbox.min.css">
+
     <meta name="description" content="Gallery of popular international dishes">
     <title>Food Gallery - Popular International Dishes</title>
 </head>
-<body>
+<body onload="randomBg()">
     <header>
         <h1>Food Gallery</h1>
-        <p class="img-title">Hover over the img to show its description</p>
+        <p class="img-title" style="color: black;">Hover over the img to show its description </p>
     </header>
     <main>
         <section aria-labelledby="gallery-heading">
             <h2 id="gallery-heading" class="sr-only">Popular Food Items</h2>
             <div class="grid">
                 <figure id="img1">
-                    <img src="media/ChickenParmesan.jpg" alt="Chicken Parmesan with melted cheese and tomato sauce" onmouseover="setDescription(this.alt)">
+                    <a href="media/ChickenParmesan.jpg" data-lightbox="images" data-title="ChickenParmesan">
+                    <img src="media/ChickenParmesan.jpg" alt="Chicken Parmesan with melted cheese and tomato sauce" onmouseover="setDescription(this.alt,this.src)" onmouseout="unsetDescription()"></a>
                     <figcaption>Chicken Parmesan</figcaption>
                 </figure>
                 <figure id="img2">
-                    <img src="media/Burger.jpg" alt="Juicy beef burger with cheese and vegetables" onmouseover="setDescription(this.alt)">
+                    <a href="media/Burger.jpg" data-lightbox="images" data-title="Burger">
+                    <img src="media/Burger.jpg" alt="Juicy beef burger with cheese and vegetables" onmouseover="setDescription(this.alt,this.src)" onmouseout="unsetDescription()">
+                    </a>
                     <figcaption>Classic Burger</figcaption>
                 </figure>
                 <figure id="img3">
-                    <img src="media/Pizza.jpg" alt="Freshly baked pepperoni pizza" onmouseover="setDescription(this.alt)">
+                    <a href="media/Pizza.jpg" data-lightbox="images" data-title="Pizza">
+                    <img src="media/Pizza.jpg" alt="Freshly baked pepperoni pizza" onmouseover="setDescription(this.alt,this.src)" onmouseout="unsetDescription()">
+                    </a>
                     <figcaption>Pepperoni Pizza</figcaption>
                 </figure>
                 <figure id="img4">
-                    <img src="media/friedChicken.jpg" alt="Crispy fried chicken pieces" onmouseover="setDescription(this.alt)">
+                    <a href="media/friedChicken.jpg" data-lightbox="images" data-title="friedChicken">
+                    <img src="media/friedChicken.jpg" alt="Crispy fried chicken pieces" onmouseover="setDescription(this.alt,this.src)" onmouseout="unsetDescription()">
+                    </a>
                     <figcaption>Fried Chicken</figcaption>
                 </figure>
                 <figure id="img5">
-                    <img src="media/Tacos.jpg" alt="Traditional Mexican tacos with various toppings" onmouseover="setDescription(this.alt)">
-                    <figcaption>Mexican Tacos</figcaption>
+                    <a href="media/Tacos.jpg" data-lightbox="images" data-title="Tacos">
+                    <img src="media/Tacos.jpg" alt="Traditional Mexican tacos with various toppings" onmouseover="setDescription(this.alt,this.src)" onmouseout="unsetDescription()">
+                    </a><figcaption>Mexican Tacos</figcaption>
                 </figure>
                 <figure id="img6">
-                    <img src="media/Truffle.jpg" alt="Gourmet truffle dish" onmouseover="setDescription(this.alt)">
-                    <figcaption>Truffle Special</figcaption>
+                    <a href="media/Truffle.jpg" data-lightbox="images" data-title="Truffle">
+                    <img src="media/Truffle.jpg" alt="Gourmet truffle dish" onmouseover="setDescription(this.alt,this.src)" onmouseout="unsetDescription()">
+                    </a><figcaption>Truffle Special</figcaption>
                 </figure>
             </div>
         </section>
@@ -57,5 +68,8 @@
             <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
         </ul>
     </footer>
+    <script src="dist/js/lightbox-plus-jquery.js"></script>
+    <script src="dist/js/lightbox.js"></script>
+    <script src="Js/script.js"></script>
 </body>
 </html>
